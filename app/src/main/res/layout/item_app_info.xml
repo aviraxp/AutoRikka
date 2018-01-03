@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable name="item" type="android.content.pm.ApplicationInfo"/>
+        <import type="moe.feng.autofill.rikka.util.Settings"/>
+    </data>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true">
+
+        <!--<ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_margin="16dp"
+            android:importantForAccessibility="no"
+            bind:drawableLoader="@{() -> Settings.getInstance().getApplicationIcon(item.packageName)}"/>-->
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+            android:text="@{item.packageName}"/>
+
+        <CheckBox
+            android:id="@android:id/checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:checked="@{Settings.getInstance().isAppEnabled(item.packageName)}"/>
+
+    </LinearLayout>
+</layout>

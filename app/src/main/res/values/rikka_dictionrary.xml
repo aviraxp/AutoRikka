@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="rikka_words">
+        <item>好耶</item>
+        <item>坏耶</item>
+        <item>不可以</item>
+        <item>嘎吱嘎吱</item>
+        <item>不清真</item>
+        <item>!?</item>
+        <item>不可以 bot</item>
+        <item>是 吧</item>
+        <item>会被吃掉</item>
+        <item>哒哒哒</item>
+        <item>吊起来打</item>
+        <item>没有 钱钱</item>
+        <item>pay Rikka</item>
+    </string-array>
+
+</resources>
